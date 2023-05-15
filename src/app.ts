@@ -24,23 +24,23 @@ app.get('/', (req: Request, res: Response, next: NextFunction) => {
     ****************************/
 
     // step 1: creating an interface 
-    interface IUser {
-        id: string;
-        role: "Student";
-        password: string;
-        name: {
-            firstName: string;
-            middleName?: string;
-            lastName: string;
-        };
-        dateOfBirth?: string;
-        gender: "male" | "female";
-        email?: string;
-        contactNo: string;
-        emergencyContactNo: string;
-        presentAddress: string;
-        permanentAddress: string;
-    }
+    // interface IUser {
+    //     id: string;
+    //     role: "Student";
+    //     password: string;
+    //     name: {
+    //         firstName: string;
+    //         middleName?: string;
+    //         lastName: string;
+    //     };
+    //     dateOfBirth?: string;
+    //     gender: "male" | "female";
+    //     email?: string;
+    //     contactNo: string;
+    //     emergencyContactNo: string;
+    //     presentAddress: string;
+    //     permanentAddress: string;
+    // }
 
 
     //step 2: creating schema using interface 
@@ -82,7 +82,7 @@ app.get('/', (req: Request, res: Response, next: NextFunction) => {
                     lastName: 'Rana',
                 },
                 gender: "male",
-                email?: "masud@gmail.com",
+                email: "masud@gmail.com",
                 contactNo: '01610087778',
                 emergencyContactNo: '01308158855',
                 presentAddress: 'USA',
