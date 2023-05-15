@@ -3,15 +3,16 @@
 // const mongoose = require('mongoose');
 
 // import 
-import express from 'express';
+// import express from 'express';
+// import cors from 'cors';
 import mongoose from 'mongoose';
-import cors from 'cors';
+import app from './app';
 
-const app = express();
-const port = 5000;
+// const app = express();
+const port: Number = 5000;
 
 // using cors 
-app.use(cors())
+// app.use(cors());
 
 
 // database connection 
@@ -34,6 +35,6 @@ async function bootstrap() {
 bootstrap();
 
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+// })
