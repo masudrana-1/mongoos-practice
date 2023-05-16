@@ -9,8 +9,8 @@ export const createUserToDB = async () => {
 
     const user = await new User(
         {
-            id: '398993',
-            role: "Student",
+            id: '39895657',
+            role: "admin",
             password: 'mahabul',
             name: {
                 firstName: 'mahabul',
@@ -26,6 +26,8 @@ export const createUserToDB = async () => {
     );
     await user.save();
 
+    // user.fullName();  //custom instance methods
+
     return user;
     // console.log(User);
 };
@@ -39,4 +41,19 @@ export const getUsersFromDB = async (): Promise<IUser[]> => {
 export const getUserByIdFromDB = async (payload: string): Promise<IUser | null> => {
     const user = await User.findOne({ id: payload }, { name: 1, contactNo: 1 });
     return user;
+}
+
+
+// export const createNewUser = async (payload: IUser): Promise<IUser> => {
+//     const user = new User(payload); // User -> class   |  user -> instance
+//     await user.save(); // user -> instance   |   save() -> methods === build in instance methods
+//     return user;
+// }
+
+
+
+// static methods 
+export const getAdminUsersFromDB = async () => {
+    const admins = await User.getAdminUsers();
+    return admins;
 }
